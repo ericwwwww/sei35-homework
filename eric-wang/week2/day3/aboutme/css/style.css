@@ -1,0 +1,51 @@
+body {
+  background-color: #ff0000;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+/*
+Make all img tags on the page have a 1px thick solid border whose oclor is white
+*/
+
+img {
+  border: 1px solid white;
+}
+
+.special {
+  background-color: darkgoldenrod;
+
+}
+
+span {
+  border: 1px solid green;
+}
+
+h1, h3 {
+  color:lime;
+}
+
+p a {
+  text-decoration: none;
+}
+
+#bestDog {
+  background-color: red;
+}
+#content{
+  width: 70%;
+  text-align: center;
+  /*center the contents, not the elements itself*/
+  margin: 0 auto;
+}
+
+img#firstBill{
+  transform:rotate(360deg) scale(1,0);
+  filter: hue-rotate(0deg);
+  transition: 2s;
+
+}
+img#firstBill:hover {
+  transform:rotate(360deg)scale(2,0);
+  filter: hue-rotate(0deg);
+  border-radius:20px;
+}
