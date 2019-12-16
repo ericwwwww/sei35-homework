@@ -12,31 +12,38 @@
 # Phase 2
 # Advanced Calculator functionality
 # Calculator should be able to do basic arithmetic (exponents, square roots)
-puts 'Please choose the function of your calculator'
-puts '1 = add'
-puts '2 = minus'
-puts '3 = multiple'
-puts '4 = division'
-puts 'choose the operator (1,2,3,4)'
-operator = gets.chomp
-puts 'What is the first number'
-num1 = gets.chomp.to_f
-puts 'What is the second number'
-num2 = gets.chomp.to_f
+require 'colorize'
+loop do
+  puts 'Please choose the function of your calculator'
+  puts '1 = add'
+  puts '2 = subtract'
+  puts '3 = multiple'
+  puts '4 = division'
+  puts '5 = exponents'
+  puts '6 = square roots'
+  puts 'choose the operator (1,2,3,4,5,6)'
+  operator = gets.chomp
+  puts 'What is the first number'
+  num1 = gets.chomp.to_f
+  puts 'What is the second number'
+  num2 = gets.chomp.to_f
 
-if operator == '1'
-  puts num1 + num2
-elsif operator == '2'
-  puts num1 - num2
-elsif operator == '3'
-  puts num1 * num2
-elsif operator == '4'
-  puts num1/num2
-else
-  puts 'invaid operator'
+  if operator == '1'
+    puts "The answer is #{num1 + num2}".green
+  elsif operator == '2'
+    puts "The answer is #{num1 - num2}".red
+  elsif operator == '3'
+    puts "The answer is #{num1 * num2}".yellow
+  elsif operator == '4'
+    puts "The answer is #{num1 / num2}".blue
+  elsif operator == '5'
+    puts "The answer is #{(num1 * num1) + (num2 * num2)}"
+  elsif operator == '6'
+    puts "The num1 square root is #{Math.sqrt(num1).round(2)},The num2 square root is #{Math.sqrt(num2).round(2)}".light_blue
+  else
+    puts 'Wrong type'
+  end
 end
-
-
 #Bonus
 # Mortgage Calculator
 # Calculate the monthly required payment given the other variables as input (look up the necessary variables)
